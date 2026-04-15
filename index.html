@@ -29,7 +29,6 @@
       overflow-x: hidden;
     }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -58,11 +57,11 @@
       font-size: 13px;
       letter-spacing: 0.05em;
       transition: color 0.2s;
+      margin-left: 18px;
     }
 
     nav a:hover { color: var(--white); }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -159,7 +158,6 @@
       font-weight: 500;
     }
 
-    /* QR GRAPHIC */
     .qr-float {
       position: absolute;
       right: 60px;
@@ -170,7 +168,6 @@
       height: 300px;
     }
 
-    /* FEATURES */
     .section {
       padding: 100px 40px;
       max-width: 1100px;
@@ -233,24 +230,22 @@
       line-height: 1.8;
     }
 
-    /* DIVIDER */
     .divider {
       border: none;
       border-top: 1px solid var(--border);
       margin: 0 40px;
     }
 
-    /* PRIVACY */
-    #privacy {
+    #privacy, #support {
       padding: 100px 40px;
     }
 
-    .privacy-inner {
+    .privacy-inner, .support-inner {
       max-width: 720px;
       margin: 0 auto;
     }
 
-    .privacy-inner h2 {
+    .privacy-inner h2, .support-inner h2 {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
       font-size: 36px;
@@ -258,192 +253,88 @@
       margin-bottom: 12px;
     }
 
-    .privacy-inner .updated {
-      font-size: 12px;
+    .privacy-inner h3, .support-inner h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .meta {
       color: var(--muted);
-      margin-bottom: 48px;
-      letter-spacing: 0.05em;
-    }
-
-    .privacy-block {
-      margin-bottom: 40px;
-      padding: 32px;
-      background: var(--card);
-      border: 1px solid var(--border);
-    }
-
-    .privacy-block h3 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      color: var(--accent);
-      margin-bottom: 14px;
-      letter-spacing: 0.02em;
-    }
-
-    .privacy-block p, .privacy-block li {
       font-size: 13px;
-      color: #aaa;
-      line-height: 1.9;
-    }
-
-    .privacy-block ul {
-      padding-left: 20px;
-      margin-top: 8px;
-    }
-
-    .privacy-block li { margin-bottom: 4px; }
-
-    /* SUPPORT */
-    #support {
-      padding: 60px 40px 100px;
-    }
-
-    .support-inner {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .support-inner h2 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 36px;
-      letter-spacing: -1px;
       margin-bottom: 32px;
     }
 
-    .support-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 32px;
-      margin-bottom: 16px;
+    .privacy-inner p, .support-inner p, .privacy-inner li {
+      color: #cfcfc7;
     }
 
-    .support-card h3 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      margin-bottom: 8px;
+    .privacy-inner ul {
+      padding-left: 22px;
+      margin-top: 12px;
     }
 
-    .support-card p {
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    .support-card a {
+    .privacy-inner a, .support-inner a, footer a {
       color: var(--accent);
       text-decoration: none;
     }
 
-    .support-card a:hover { text-decoration: underline; }
-
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
-      padding: 32px 40px;
+      padding: 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 16px;
-    }
-
-    footer .logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 16px;
-    }
-
-    footer .logo span { color: var(--accent); }
-
-    footer p {
-      font-size: 12px;
       color: var(--muted);
+      font-size: 13px;
     }
 
-    footer nav {
-      position: static;
-      background: none;
-      border: none;
-      backdrop-filter: none;
-      padding: 0;
-      gap: 24px;
-    }
-
-    @media (max-width: 768px) {
-      nav { padding: 16px 20px; }
-      .hero { padding: 100px 20px 60px; }
-      h1 { font-size: 48px; letter-spacing: -2px; }
+    @media (max-width: 900px) {
       .qr-float { display: none; }
-      .section { padding: 60px 20px; }
-      #privacy, #support { padding: 60px 20px; }
-      footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
-      footer nav { flex-direction: row; gap: 16px; }
+      nav { padding: 16px 20px; }
+      .hero, .section, #privacy, #support { padding-left: 20px; padding-right: 20px; }
+      .divider { margin: 0 20px; }
     }
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
   <nav>
-    <div class="nav-logo">Can<span>Scan</span> QR</div>
-    <div style="display:flex;gap:32px;">
+    <div class="nav-logo">CanScan <span>QR</span></div>
+    <div>
       <a href="#features">Features</a>
       <a href="#privacy">Privacy</a>
       <a href="#support">Support</a>
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-tag">iOS App · $4.99</div>
-    <h1>Scan.<br/><em>Save.</em><br/>Done.</h1>
+    <h1>Scan. <em>Save.</em> Done.</h1>
     <p class="hero-sub">CanScan QR is a fast, no-nonsense QR code scanner for iPhone. Scan anything, save batches locally, and move on with your day.</p>
     <div class="cta-row">
-      <a href="#" class="btn-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        App Store
-      </a>
-      <span class="price-tag">One-time purchase · <strong>$4.99</strong></span>
+      <a class="btn-primary" href="#">App Store</a>
+      <div class="price-tag">One-time purchase · <strong>$4.99</strong></div>
     </div>
-
-    <!-- decorative QR SVG -->
-    <svg class="qr-float" viewBox="0 0 100 100" fill="white" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="10" width="30" height="30" rx="2" fill="white"/>
-      <rect x="15" y="15" width="20" height="20" rx="1" fill="#080808"/>
-      <rect x="20" y="20" width="10" height="10" fill="white"/>
-      <rect x="60" y="10" width="30" height="30" rx="2" fill="white"/>
-      <rect x="65" y="15" width="20" height="20" rx="1" fill="#080808"/>
-      <rect x="70" y="20" width="10" height="10" fill="white"/>
-      <rect x="10" y="60" width="30" height="30" rx="2" fill="white"/>
-      <rect x="15" y="65" width="20" height="20" rx="1" fill="#080808"/>
-      <rect x="20" y="70" width="10" height="10" fill="white"/>
-      <rect x="60" y="60" width="5" height="5" fill="white"/>
-      <rect x="70" y="60" width="5" height="5" fill="white"/>
-      <rect x="80" y="60" width="10" height="5" fill="white"/>
-      <rect x="60" y="70" width="10" height="5" fill="white"/>
-      <rect x="75" y="70" width="5" height="5" fill="white"/>
-      <rect x="85" y="70" width="5" height="5" fill="white"/>
-      <rect x="60" y="80" width="5" height="10" fill="white"/>
-      <rect x="70" y="80" width="10" height="5" fill="white"/>
-      <rect x="85" y="80" width="5" height="10" fill="white"/>
-      <rect x="45" y="10" width="5" height="5" fill="white"/>
-      <rect x="45" y="20" width="5" height="10" fill="white"/>
-      <rect x="45" y="35" width="5" height="5" fill="white"/>
-      <rect x="10" y="45" width="10" height="5" fill="white"/>
-      <rect x="25" y="45" width="5" height="5" fill="white"/>
-      <rect x="35" y="45" width="5" height="5" fill="white"/>
-      <rect x="45" y="45" width="5" height="5" fill="white"/>
+    <svg class="qr-float" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="100" height="100" stroke="#00e5a0" stroke-width="2"/>
+      <rect x="8" y="8" width="22" height="22" stroke="#00e5a0" stroke-width="5"/>
+      <rect x="70" y="8" width="22" height="22" stroke="#00e5a0" stroke-width="5"/>
+      <rect x="8" y="70" width="22" height="22" stroke="#00e5a0" stroke-width="5"/>
+      <rect x="40" y="40" width="6" height="6" fill="#00e5a0"/>
+      <rect x="52" y="40" width="6" height="6" fill="#00e5a0"/>
+      <rect x="40" y="52" width="6" height="6" fill="#00e5a0"/>
+      <rect x="52" y="52" width="6" height="6" fill="#00e5a0"/>
+      <rect x="64" y="52" width="6" height="6" fill="#00e5a0"/>
+      <rect x="64" y="64" width="6" height="6" fill="#00e5a0"/>
+      <rect x="52" y="64" width="6" height="6" fill="#00e5a0"/>
     </svg>
   </section>
 
-  <hr class="divider" />
-
-  <!-- FEATURES -->
-  <div class="section" id="features">
-    <div class="section-label">What it does</div>
+  <section class="section" id="features">
+    <div class="section-label">What it does ⚡</div>
     <div class="features-grid">
       <div class="feature-card">
         <span class="feature-icon">⚡</span>
@@ -466,105 +357,80 @@
         <p>Native SwiftUI design that feels right at home on iOS. Fast, lightweight, and doesn't drain your battery.</p>
       </div>
     </div>
-  </div>
+  </section>
 
   <hr class="divider" />
 
-  <!-- PRIVACY POLICY -->
   <section id="privacy">
     <div class="privacy-inner">
       <div class="section-label">Legal</div>
       <h2>Privacy Policy</h2>
-      <p class="updated">Last updated: April 15, 2026</p>
+      <p class="meta">Last updated: April 15, 2026</p>
 
-      <div class="privacy-block">
-        <h3>Overview</h3>
-        <p>CanScan QR ("the App") is designed with privacy as a core principle. We collect no personal data, require no account, and do not transmit any information to external servers.</p>
-      </div>
+      <h3>Overview</h3>
+      <p>CanScan QR ("the App") is designed with privacy as a core principle. We collect no personal data, require no account, and do not transmit any information to external servers.</p>
 
-      <div class="privacy-block">
-        <h3>Camera Permission</h3>
-        <p>The App requests access to your device camera solely to scan QR codes. Camera data is processed entirely on-device in real time and is never stored, transmitted, or shared. You can revoke camera access at any time in iOS Settings → CanScan QR → Camera.</p>
-      </div>
+      <h3>Camera Permission</h3>
+      <p>The App requests access to your device camera solely to scan QR codes. Camera data is processed entirely on-device in real time and is never stored, transmitted, or shared. You can revoke camera access at any time in iOS Settings → CanScan QR → Camera.</p>
 
-      <div class="privacy-block">
-        <h3>Data Collection</h3>
-        <p>CanScan QR does <strong style="color:var(--white)">not</strong> collect, store, or transmit:</p>
-        <ul>
-          <li>Personal information of any kind</li>
-          <li>Camera images or video</li>
-          <li>Location data</li>
-          <li>Usage analytics or telemetry</li>
-          <li>Device identifiers</li>
-        </ul>
-      </div>
+      <h3>Data Collection</h3>
+      <p>CanScan QR does <strong>not</strong> collect, store, or transmit:</p>
+      <ul>
+        <li>Personal information of any kind</li>
+        <li>Camera images or video</li>
+        <li>Location data</li>
+        <li>Usage analytics or telemetry</li>
+        <li>Device identifiers</li>
+      </ul>
 
-      <div class="privacy-block">
-        <h3>Local Storage</h3>
-        <p>Scan batches you save are stored locally on your device only. This data never leaves your device and is not accessible to us or any third party. You can delete all saved data by deleting the App.</p>
-      </div>
+      <h3>Local Storage</h3>
+      <p>Scan batches you save are stored locally on your device only. This data never leaves your device and is not accessible to us or any third party. You can delete all saved data by deleting the App.</p>
 
-      <div class="privacy-block">
-        <h3>Third-Party Services</h3>
-        <p>CanScan QR does not integrate any third-party SDKs, analytics platforms, advertising networks, or crash reporting services.</p>
-      </div>
+      <h3>Third-Party Services</h3>
+      <p>CanScan QR does not integrate any third-party SDKs, analytics platforms, advertising networks, or crash reporting services.</p>
 
-      <div class="privacy-block">
-        <h3>Children's Privacy</h3>
-        <p>The App does not collect any data from any user, including children under 13. It is safe for use by all ages.</p>
-      </div>
+      <h3>Children's Privacy</h3>
+      <p>The App does not collect any data from any user, including children under 13. It is safe for use by all ages.</p>
 
-      <div class="privacy-block">
-        <h3>Changes to This Policy</h3>
-        <p>If we update this privacy policy, the new version will be posted at this URL with an updated date. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
-      </div>
+      <h3>Changes to This Policy</h3>
+      <p>If we update this privacy policy, the new version will be posted at this URL with an updated date. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
 
-      <div class="privacy-block">
-        <h3>Contact</h3>
-        <p>Questions about this privacy policy? Reach us at <a href="mailto:support@canscanqr.app" style="color:var(--accent);text-decoration:none;">support@canscanqr.app</a></p>
-      </div>
+      <h3>Contact</h3>
+      <p>Questions about this privacy policy? Reach us at <a href="mailto:support@canscanqr.app">support@canscanqr.app</a>.</p>
     </div>
   </section>
 
   <hr class="divider" />
 
-  <!-- SUPPORT -->
   <section id="support">
     <div class="support-inner">
       <div class="section-label">Help</div>
       <h2>Support</h2>
 
-      <div class="support-card">
-        <h3>How do I scan a QR code?</h3>
-        <p>Open the app and point your camera at any QR code. It scans automatically — no button needed.</p>
-      </div>
+      <h3>How do I scan a QR code?</h3>
+      <p>Open the app and point your camera at any QR code. It scans automatically — no button needed.</p>
 
-      <div class="support-card">
-        <h3>How do batches work?</h3>
-        <p>After scanning, you can add results to a named batch. Batches are saved locally on your device and can be reviewed anytime from the Batches tab.</p>
-      </div>
+      <h3>How do batches work?</h3>
+      <p>After scanning, you can add results to a named batch. Batches are saved locally on your device and can be reviewed anytime from the Batches tab.</p>
 
-      <div class="support-card">
-        <h3>Why does the app need camera access?</h3>
-        <p>Camera access is required to scan QR codes. This is the only permission the app requests. Your camera feed is processed on-device and never stored or transmitted.</p>
-      </div>
+      <h3>Why does the app need camera access?</h3>
+      <p>Camera access is required to scan QR codes. This is the only permission the app requests. Your camera feed is processed on-device and never stored or transmitted.</p>
 
-      <div class="support-card">
-        <h3>Get in touch</h3>
-        <p>Having an issue or have a feature request? Email us at <a href="mailto:support@canscanqr.app">support@canscanqr.app</a> and we'll get back to you.</p>
-      </div>
+      <h3>Get in touch</h3>
+      <p>Having an issue or have a feature request? Email us at <a href="mailto:support@canscanqr.app">support@canscanqr.app</a> and we'll get back to you.</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="logo">Can<span>Scan</span> QR</div>
-    <p>© 2026 CanScan QR. All rights reserved.</p>
-    <nav>
+    <div>
+      <strong>CanScan QR</strong>
+      <p>© 2026 CanScan QR. All rights reserved.</p>
+    </div>
+    <div>
       <a href="#privacy">Privacy Policy</a>
+      &nbsp;·&nbsp;
       <a href="#support">Support</a>
-    </nav>
+    </div>
   </footer>
-
 </body>
 </html>
